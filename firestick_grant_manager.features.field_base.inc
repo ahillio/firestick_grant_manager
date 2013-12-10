@@ -39,47 +39,6 @@ function firestick_grant_manager_field_default_field_bases() {
     'type' => 'text_with_summary',
   );
 
-  // Exported field_base: 'field_contacts_person'
-  $field_bases['field_contacts_person'] = array(
-    'active' => 1,
-    'cardinality' => -1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_contacts_person',
-    'foreign keys' => array(
-      'redhen_contact_type' => array(
-        'columns' => array(
-          'target_id' => 'contact_type_id',
-        ),
-        'table' => 'redhen_contact_type',
-      ),
-    ),
-    'indexes' => array(
-      'target_id' => array(
-        0 => 'target_id',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'entityreference',
-    'settings' => array(
-      'handler' => 'base',
-      'handler_settings' => array(
-        'behaviors' => array(
-          'views-select-list' => array(
-            'status' => 0,
-          ),
-        ),
-        'sort' => array(
-          'type' => 'none',
-        ),
-        'target_bundles' => array(),
-      ),
-      'target_type' => 'redhen_contact_type',
-    ),
-    'translatable' => 0,
-    'type' => 'entityreference',
-  );
-
   // Exported field_base: 'field_foundation'
   $field_bases['field_foundation'] = array(
     'active' => 1,
