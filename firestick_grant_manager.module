@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Firestick Grant Manager feature.
+ */
+
+include_once 'firestick_grant_manager.features.inc';
