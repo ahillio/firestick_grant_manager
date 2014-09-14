@@ -8,8 +8,8 @@
  * Implements hook_ctools_plugin_api().
  */
 function firestick_grant_manager_ctools_plugin_api($module = NULL, $api = NULL) {
-  if ($module == "context" && $api == "context") {
-    return array("version" => "3");
+  if ($module == "relation" && $api == "relation_type_default") {
+    return array("version" => "1");
   }
 }
 
