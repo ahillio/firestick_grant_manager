@@ -5,12 +5,36 @@
  */
 
 /**
+ * Implements hook_ctools_plugin_api().
+ */
+function firestick_grant_manager_ctools_plugin_api($module = NULL, $api = NULL) {
+  if ($module == "context" && $api == "context") {
+    return array("version" => "3");
+  }
+}
+
+/**
+ * Implements hook_views_api().
+ */
+function firestick_grant_manager_views_api($module = NULL, $api = NULL) {
+  return array("api" => "3.0");
+}
+
+/**
  * Implements hook_node_info().
  */
 function firestick_grant_manager_node_info() {
   $items = array(
     'grant' => array(
       'name' => t('Grant'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
+    'program' => array(
+      'name' => t('Program'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
